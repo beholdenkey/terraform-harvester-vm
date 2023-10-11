@@ -13,6 +13,12 @@ variable "display_name" {
   type        = string
 }
 
+variable "description" {
+  description = "Any text you want that better describes this resource"
+  type        = string
+  default     = ""
+}
+
 variable "source_type" {
   description = "Source type for the image (e.g., download, upload)"
   type        = string
@@ -31,4 +37,22 @@ variable "tags" {
   description = "Tags associated with the image"
   type        = map(string)
   default     = {}
+}
+
+variable "storage_class_name" {
+  description = "The name of the storage class"
+  type        = string
+  default     = ""
+}
+
+variable "pvc_name" {
+  description = "PVC Name"
+  type        = string
+  default     = ""
+}
+
+variable "pvc_namespace" {
+  description = "PVC Namespace"
+  type        = string
+  default     = ""
 }

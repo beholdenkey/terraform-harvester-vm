@@ -1,30 +1,28 @@
 resource "harvester_virtualmachine" "vm" {
-  depends_on = [var.vm_image_id]
-
-  name         = var.vm_data.name
-  namespace    = var.vm_data.namespace
-  description  = var.vm_data.description
-  hostname     = var.vm_data.hostname
-  tags         = var.vm_data.tags
-  cpu          = var.vm_data.cpus
-  memory       = var.vm_data.memory
+  name         = var.name
+  namespace    = var.namespace
+  description  = var.description
+  hostname     = var.hostname
+  tags         = var.tags
+  cpu          = var.cpu
+  memory       = var.memory
   run_strategy = "RerunOnFailure"
 
   network_interface {
     name         = "nic-0"
-    network_name = var.network_name # Reference to the network name variable
+    network_name = var.network_name
   }
 
   dynamic "disk" {
-    for_each = var.vm_data.disks
+    for_each = var.disks
     content {
       name        = disk.value.name
-      type        = "disk"
+      type        = disk.value.type
       size        = disk.value.size
-      bus         = "virtio"
+      bus         = disk.value.bus
       boot_order  = disk.value.boot_order
-      image       = var.vm_image_id # Reference to the VM image ID variable
-      auto_delete = true
+      image       = var.vm_image_id
+      auto_delete = disk.value.auto_delete
     }
   }
 

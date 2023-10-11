@@ -19,7 +19,14 @@ module "harvester_vm_image" {
 module "harvester_vm" {
   source       = "./modules/harvester-vm"
   vm_image_id  = module.harvester_vm_image.image_id
-  vm_data      = var.vm_data
+  name         = var.vm_name
+  hostname     = var.vm_hostname
+  namespace    = var.vm_namespace
+  description  = var.vm_description
+  tags         = var.vm_tags
+  cpu          = var.vm_cpus
+  memory       = var.vm_memory
+  disks        = var.vm_disks
   user_data    = var.user_data
   network_data = var.network_data
   network_name = module.harvester_vm_network.network_name

@@ -60,23 +60,55 @@ variable "image_tags" {
   default     = {}
 }
 
-variable "vm_data" {
-  description = "Configuration data for the virtual machine"
-  type = object({
-    name        = string      # Name of the virtual machine
-    hostname    = string      # Hostname for the virtual machine
-    namespace   = string      # Namespace where the VM will reside
-    description = string      # Description for the VM
-    tags        = map(string) # Tags associated with the VM
-    cpus        = number      # Number of CPUs for the VM
-    memory      = string      # Memory allocation for the VM
-    disks = list(object({     # List of disks for the VM
-      name       = string     # Name of the disk
-      size       = string     # Size of the disk
-      boot_order = number     # Boot order for the disk
-    }))
-  })
+# Variables for harvester_vm module
+variable "vm_name" {
+  description = "Name of the virtual machine"
+  type        = string
 }
+
+variable "vm_hostname" {
+  description = "Hostname for the virtual machine"
+  type        = string
+}
+
+variable "vm_namespace" {
+  description = "Namespace where the VM will reside"
+  type        = string
+}
+
+variable "vm_description" {
+  description = "Description for the VM"
+  type        = string
+}
+
+variable "vm_tags" {
+  description = "Tags associated with the VM"
+  type        = map(string)
+  default     = {}
+}
+
+variable "vm_cpus" {
+  description = "Number of CPUs for the VM"
+  type        = number
+}
+
+variable "vm_memory" {
+  description = "Memory allocation for the VM"
+  type        = string
+}
+
+variable "vm_disks" {
+  description = "List of disks for the VM"
+  type = list(object({
+    name        = string # Name of the disk
+    type        = string # Type of the disk
+    size        = string # Size of the disk
+    bus         = string # Bus type of the disk
+    boot_order  = number # Boot order for the disk
+    auto_delete = bool   # Auto delete flag for the disk
+  }))
+}
+
 
 variable "user_data" {
   description = "User data for cloud-init configuration"

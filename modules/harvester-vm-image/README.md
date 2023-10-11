@@ -21,10 +21,10 @@
 |------|-------------|------|---------|:--------:|
 | display_name | The display name for the OS image | `string` | n/a | yes |
 | name | The name of the OS image | `string` | n/a | yes |
-| namespace | The namespace where the image will reside | `string` | n/a | yes |
 | source_type | Source type for the image (e.g., download, upload) | `string` | n/a | yes |
 | url | URL from where the image will be downloaded | `string` | n/a | yes |
 | description | Any text you want that better describes this resource | `string` | `""` | no |
+| namespace | The namespace where the image will reside | `string` | `"default"` | no |
 | pvc_name | PVC Name | `string` | `""` | no |
 | pvc_namespace | PVC Namespace | `string` | `""` | no |
 | storage_class_name | The name of the storage class | `string` | `""` | no |

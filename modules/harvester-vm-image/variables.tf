@@ -6,6 +6,7 @@ variable "name" {
 variable "namespace" {
   description = "The namespace where the image will reside"
   type        = string
+  default     = "default"
 }
 
 variable "display_name" {

@@ -6,6 +6,7 @@ variable "name" {
 variable "namespace" {
   description = "Namespace of the virtual machine"
   type        = string
+  default     = "default"
 }
 
 variable "description" {

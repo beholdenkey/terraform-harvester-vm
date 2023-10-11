@@ -22,6 +22,7 @@ variable "network_name" {
 variable "network_namespace" {
   description = "Namespace of the network"
   type        = string
+  default     = "default"
 }
 
 
@@ -33,6 +34,7 @@ variable "image_name" {
 variable "image_namespace" {
   description = "The namespace where the image will reside"
   type        = string
+  default     = "default"
 }
 
 variable "image_display_name" {
@@ -74,6 +76,7 @@ variable "vm_hostname" {
 variable "vm_namespace" {
   description = "Namespace where the VM will reside"
   type        = string
+  default     = "default"
 }
 
 variable "vm_description" {

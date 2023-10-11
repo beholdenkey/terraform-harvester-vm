@@ -30,11 +30,9 @@ Terraform modules which creates Virtual Machines on Harvester HCI
 | harvester_kubeconfig_path | Path to the kubeconfig file | `string` | n/a | yes |
 | image_display_name | The display name for the OS image | `string` | n/a | yes |
 | image_name | The name of the OS image | `string` | n/a | yes |
-| image_namespace | The namespace where the image will reside | `string` | n/a | yes |
 | image_source_type | Source type for the image (e.g., download, upload) | `string` | n/a | yes |
 | image_url | URL from where the image will be downloaded | `string` | n/a | yes |
 | network_name | Name of the network | `string` | n/a | yes |
-| network_namespace | Namespace of the network | `string` | n/a | yes |
 | network_vlan_id | VLAN ID for the network | `string` | n/a | yes |
 | user_data | User data for cloud-init configuration | `string` | n/a | yes |
 | vm_cpus | Number of CPUs for the VM | `number` | n/a | yes |
@@ -43,9 +41,11 @@ Terraform modules which creates Virtual Machines on Harvester HCI
 | vm_hostname | Hostname for the virtual machine | `string` | n/a | yes |
 | vm_memory | Memory allocation for the VM | `string` | n/a | yes |
 | vm_name | Name of the virtual machine | `string` | n/a | yes |
-| vm_namespace | Namespace where the VM will reside | `string` | n/a | yes |
+| image_namespace | The namespace where the image will reside | `string` | `"default"` | no |
 | image_tags | Tags associated with the image | `map(string)` | `{}` | no |
 | network_data | Network data for cloud-init configuration | `string` | `""` | no |
+| network_namespace | Namespace of the network | `string` | `"default"` | no |
+| vm_namespace | Namespace where the VM will reside | `string` | `"default"` | no |
 | vm_tags | Tags associated with the VM | `map(string)` | `{}` | no |
 
 ## Outputs

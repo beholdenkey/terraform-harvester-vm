@@ -16,4 +16,5 @@ variable "name" {
 variable "namespace" {
   description = "Namespace of the network"
   type        = string
+  default     = "default"
 }

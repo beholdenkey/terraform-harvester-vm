@@ -1,7 +1,9 @@
 module "harvester_vm_network" {
-  source    = "./modules/harvester-vm-network"
-  name      = var.network_name
-  namespace = var.network_namespace
+  source               = "./modules/harvester-vm-network"
+  cluster_network_name = var.cluster_network_name
+  name                 = var.network_name
+  namespace            = var.network_namespace
+  vlan_id              = var.network_vlan_id
 }
 
 module "harvester_vm_image" {
@@ -16,7 +18,9 @@ module "harvester_vm_image" {
 
 module "harvester_vm" {
   source       = "./modules/harvester-vm"
+  vm_image_id  = module.harvester_vm_image.image_id
   vm_data      = var.vm_data
   user_data    = var.user_data
   network_data = var.network_data
+  network_name = module.harvester_vm_network.network_name
 }

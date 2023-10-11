@@ -1,9 +1,19 @@
+variable "vlan_id" {
+  description = "VLAN ID for the network"
+  type        = string
+}
+
+variable "cluster_network_name" {
+  description = "Cluster network name"
+  type        = string
+}
+
 variable "name" {
-  description = "The name of the network"
+  description = "Name of the network"
   type        = string
 }
 
 variable "namespace" {
-  description = "The namespace of the network"
+  description = "Namespace of the network"
   type        = string
 }

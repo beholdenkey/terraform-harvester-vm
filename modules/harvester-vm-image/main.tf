@@ -6,7 +6,3 @@ resource "harvester_image" "vm_image" {
   url          = var.url
   tags         = var.tags
 }
-
-output "image_id" {
-  value = harvester_image.vm_image.id
-}

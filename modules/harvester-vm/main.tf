@@ -1,5 +1,5 @@
 resource "harvester_virtualmachine" "vm" {
-  depends_on = [harvester_image.vm_image]
+  depends_on = [var.vm_image_id]
 
   name         = var.vm_data.name
   namespace    = var.vm_data.namespace
@@ -12,7 +12,7 @@ resource "harvester_virtualmachine" "vm" {
 
   network_interface {
     name         = "nic-0"
-    network_name = harvester_network.vm_network.name
+    network_name = var.network_name # Reference to the network name variable
   }
 
   dynamic "disk" {
@@ -23,7 +23,7 @@ resource "harvester_virtualmachine" "vm" {
       size        = disk.value.size
       bus         = "virtio"
       boot_order  = disk.value.boot_order
-      image       = harvester_image.vm_image.id
+      image       = var.vm_image_id # Reference to the VM image ID variable
       auto_delete = true
     }
   }

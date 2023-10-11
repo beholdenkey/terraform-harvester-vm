@@ -1,4 +1,4 @@
-output "network_id" {
-  description = "The ID of the created network"
-  value       = harvester_network.vm_network.id
+output "network_name" {
+  value       = harvester_network.vm_network.name
+  description = "The name of the network"
 }

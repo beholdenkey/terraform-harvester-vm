@@ -26,3 +26,13 @@ variable "network_data" {
   type        = string
   default     = ""
 }
+
+variable "vm_image_id" {
+  description = "The ID of the VM image"
+  type        = string
+}
+
+variable "network_name" {
+  description = "The name of the network"
+  type        = string
+}

@@ -1,11 +1,11 @@
 output "network_id" {
-  description = "The ID of the created network"
-  value       = module.harvester_vm_network.network_id
+  value       = module.harvester_vm_network.network_name
+  description = "The name of the network"
 }
 
 output "image_id" {
-  description = "The ID of the created image"
   value       = module.harvester_vm_image.image_id
+  description = "The ID of the VM image"
 }
 
 output "vm_id" {

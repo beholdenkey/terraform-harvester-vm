@@ -1,12 +1,29 @@
+variable "harvester_kubeconfig_path" {
+  description = "Path to the kubeconfig file"
+  type        = string
+}
+
+variable "cluster_network_name" {
+  description = "Cluster network name"
+  type        = string
+}
+
+
+variable "network_vlan_id" {
+  description = "VLAN ID for the network"
+  type        = string
+}
+
 variable "network_name" {
-  description = "The name of the network"
+  description = "Name of the network"
   type        = string
 }
 
 variable "network_namespace" {
-  description = "The namespace of the network"
+  description = "Namespace of the network"
   type        = string
 }
+
 
 variable "image_name" {
   description = "The name of the OS image"

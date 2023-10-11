@@ -1,0 +1,20 @@
+---
+name: Issue assignment
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+
+jobs:
+  auto-assign:
+    permissions:
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: "auto-assign issue"
+        uses: pozil/auto-assign-issue@v1.12.0
+        with:
+          assignees: beholdenkey

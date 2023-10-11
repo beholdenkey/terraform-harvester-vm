@@ -1,0 +1,36 @@
+formatter: markdown table
+
+content: |-
+  # Usage
+  ```hcl
+  {{ include "examples/basic/main.tf" }}
+  ```
+
+  {{ .Providers }}
+
+  {{ .Modules }}
+
+  {{ .Resources }}
+
+  {{ .Inputs }}  
+
+  {{ .Outputs }}
+
+output:
+  file: README.md
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
+
+sort:
+  enabled: true
+  by: required
+
+settings:
+  anchor: false
+  html: false
+  escape: false
+  hide-empty: true
+  color: true

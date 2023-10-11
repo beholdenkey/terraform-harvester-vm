@@ -1,0 +1,31 @@
+network_name        = "example-net"
+network_namespace   = "default"
+image_name          = "example-image"
+image_namespace     = "default"
+image_display_name  = "Example Image"
+image_source_type   = "download"
+image_url           = "https://example.com/image.qcow2"
+image_tags          = { "os" = "example-os" }
+vm_data = {
+  name        = "example-vm"
+  hostname    = "example-host"
+  namespace   = "default"
+  description = "Example VM"
+  tags        = { "purpose" = "example" }
+  cpus        = 2
+  memory      = "2Gi"
+  disks = [
+    {
+      name       = "rootdisk"
+      size       = "20Gi"
+      boot_order = 1
+    }
+  ]
+}
+user_data     = <<-EOF
+#cloud-config
+password: examplepassword
+chpasswd:
+  expire: false
+EOF
+network_data = ""

@@ -45,7 +45,7 @@ variable "image_tags" {
 
 variable "vm_data" {
   description = "Configuration data for the virtual machine"
-  type        = object({
+  type = object({
     name        = string      # Name of the virtual machine
     hostname    = string      # Hostname for the virtual machine
     namespace   = string      # Namespace where the VM will reside
@@ -53,10 +53,10 @@ variable "vm_data" {
     tags        = map(string) # Tags associated with the VM
     cpus        = number      # Number of CPUs for the VM
     memory      = string      # Memory allocation for the VM
-    disks       = list(object({ # List of disks for the VM
-      name       = string # Name of the disk
-      size       = string # Size of the disk
-      boot_order = number # Boot order for the disk
+    disks = list(object({     # List of disks for the VM
+      name       = string     # Name of the disk
+      size       = string     # Size of the disk
+      boot_order = number     # Boot order for the disk
     }))
   })
 }

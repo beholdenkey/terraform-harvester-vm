@@ -1,6 +1,6 @@
 variable "vm_data" {
   description = "Configuration data for the virtual machine"
-  type        = object({
+  type = object({
     name        = string
     namespace   = string
     description = string
@@ -8,7 +8,7 @@ variable "vm_data" {
     tags        = map(string)
     cpus        = number
     memory      = string
-    disks       = list(object({
+    disks = list(object({
       name       = string
       size       = string
       boot_order = number

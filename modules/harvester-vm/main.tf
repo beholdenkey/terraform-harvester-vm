@@ -33,4 +33,3 @@ resource "harvester_virtualmachine" "vm" {
     network_data = var.network_data
   }
 }
-

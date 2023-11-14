@@ -43,17 +43,17 @@ variable "tags" {
 variable "storage_class_name" {
   description = "The name of the storage class"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "pvc_name" {
   description = "PVC Name"
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "pvc_namespace" {
   description = "PVC Namespace"
   type        = string
-  default     = ""
+  default     = null
 }

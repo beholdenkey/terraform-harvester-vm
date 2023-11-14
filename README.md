@@ -11,7 +11,6 @@ Terraform modules which creates Virtual Machines on Harvester HCI
 
 <!-- BEGIN_TF_DOCS -->
 
-
 ## Modules
 
 | Name | Source | Version |
@@ -19,8 +18,6 @@ Terraform modules which creates Virtual Machines on Harvester HCI
 | harvester_vm | ./modules/harvester-vm | n/a |
 | harvester_vm_image | ./modules/harvester-vm-image | n/a |
 | harvester_vm_network | ./modules/harvester-vm-network | n/a |
-
-
 
 ## Inputs
 

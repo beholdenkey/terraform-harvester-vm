@@ -7,8 +7,6 @@
 |------|---------|
 | harvester | 0.6.3 |
 
-
-
 ## Resources
 
 | Name | Type |
@@ -24,9 +22,9 @@
 | source_type | Source type for the image (e.g., download, upload) | `string` | n/a | yes |
 | url | URL from where the image will be downloaded | `string` | n/a | yes |
 | description | Any text you want that better describes this resource | `string` | `""` | no |
-| namespace | The namespace where the image will reside | `string` | `"default"` | no |
-| pvc_name | PVC Name | `string` | `""` | no |
-| pvc_namespace | PVC Namespace | `string` | `""` | no |
+| namespace | The namespace where the image will reside | `string` | `"null"` | no |
+| pvc_name | PVC Name | `string` | `null` | no |
+| pvc_namespace | PVC Namespace | `string` | `null` | no |
 | storage_class_name | The name of the storage class | `string` | `""` | no |
 | tags | Tags associated with the image | `map(string)` | `{}` | no |
 

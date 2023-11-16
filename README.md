@@ -54,6 +54,8 @@ Terraform modules which creates Virtual Machines on Harvester HCI
 | vm_id | The ID of the created virtual machine |
 <!-- END_TF_DOCS -->
 
+![Visualization of this repo](./diagram.svg)
+
 ## References
 
 - [Harvester Terraform Provider](https://registry.terraform.io/providers/harvester/harvester/latest)

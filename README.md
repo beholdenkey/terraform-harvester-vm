@@ -55,8 +55,6 @@ Terraform modules which creates Virtual Machines on Harvester HCI
 
 <!-- END_TF_DOCS -->
 
-![Visualization of this repo](./diagram.svg)
-
 ## References
 
 - [Harvester Terraform Provider](https://registry.terraform.io/providers/harvester/harvester/latest)

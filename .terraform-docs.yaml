@@ -2,12 +2,9 @@ formatter: markdown table
 
 content: |-
   {{ .Providers }}
-
   {{ .Modules }}
-
   {{ .Resources }}
-
-  {{ .Inputs }}  
+  {{ .Inputs }}
 
   {{ .Outputs }}
 

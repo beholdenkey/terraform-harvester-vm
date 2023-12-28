@@ -6,13 +6,13 @@
 
 | Name      | Version |
 | --------- | ------- |
-| harvester | 0.6.3   |
+| harvester | 0.6.4   |
 
 ## Resources
 
 | Name                                                                                                                     | Type     |
 | ------------------------------------------------------------------------------------------------------------------------ | -------- |
-| [harvester_network.vm_network](https://registry.terraform.io/providers/harvester/harvester/0.6.3/docs/resources/network) | resource |
+| [harvester_network.vm_network](https://registry.terraform.io/providers/harvester/harvester/0.6.4/docs/resources/network) | resource |
 
 ## Inputs
 

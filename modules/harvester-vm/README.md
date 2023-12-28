@@ -6,13 +6,13 @@
 
 | Name      | Version |
 | --------- | ------- |
-| harvester | 0.6.3   |
+| harvester | 0.6.4   |
 
 ## Resources
 
 | Name                                                                                                                           | Type     |
 | ------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| [harvester_virtualmachine.vm](https://registry.terraform.io/providers/harvester/harvester/0.6.3/docs/resources/virtualmachine) | resource |
+| [harvester_virtualmachine.vm](https://registry.terraform.io/providers/harvester/harvester/0.6.4/docs/resources/virtualmachine) | resource |
 
 ## Inputs
 

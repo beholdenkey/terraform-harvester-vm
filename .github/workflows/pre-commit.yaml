@@ -4,11 +4,10 @@ on:
   pull_request:
     branches:
       - main
-      - master
 
 env:
-  TERRAFORM_DOCS_VERSION: v0.16.0
-  TFLINT_VERSION: v0.44.1
+  TERRAFORM_DOCS_VERSION: v0.17.0
+  TFLINT_VERSION: v0.50.0
 
 jobs:
   collectInputs:

@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "auto-assign issue"
-        uses: pozil/auto-assign-issue@v1.13.0
+        uses: pozil/auto-assign-issue@v1.14.0
         with:
           assignees: beholdenkey

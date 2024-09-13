@@ -16,12 +16,5 @@
     "commitBodyTable": true,
     "platformCommit": true,
     "gitAuthor": "Justin Bailey <beholdenkey@users.noreply.github.com>",
-    "commitBody": "Signed-off-by: Justin Bailey <beholdenkey@users.noreply.github.com>",
-    "helm-values": {
-      "fileMatch": ["./.+\\.yaml$"]
-    },
-    "kubernetes": {
-      "fileMatch": ["\\.yaml$"],
-      "ignorePaths": [".github"]
-    }
+    "commitBody": "Signed-off-by: Justin Bailey <beholdenkey@users.noreply.github.com>"
   }

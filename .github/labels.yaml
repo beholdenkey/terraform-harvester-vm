@@ -1,0 +1,15 @@
+---
+# Area
+- {name: "area/infra", color: "b60205"}
+- {name: "area/ci", color: "b60205"}
+- {name: "area/docs", color: "b60205"}
+# Renovate
+- {name: "renovate/github-action", color: "027fa0"}
+- {name: "renovate/github-release", color: "027fa0"}
+- {name: "renovate/terraform", color: "027fa0"}
+- {name: "renovate/pre-commit", color: "0e8a16"}
+# Semantic Type
+- {name: "type/patch", color: "ffec19"}
+- {name: "type/minor", color: "ff9800"}
+- {name: "type/major", color: "f6412d"}
+- {name: "type/break", color: "f6412d"}

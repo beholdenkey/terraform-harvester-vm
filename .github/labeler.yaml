@@ -1,0 +1,21 @@
+---
+area/infra:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.tf"
+      - any-glob-to-any-file: "**/*.hcl"
+area/ci:
+  - changed-files:
+      - any-glob-to-any-file: ".github/**/*"
+      - any-glob-to-any-file: ".pre-commit-config.yaml"
+area/docs:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.md"
+renovate/github-action:
+  - changed-files:
+      - any-glob-to-any-file: ".github/actions/**/*"
+renovate/terraform:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.tf"
+renovate/pre-commit:
+  - changed-files:
+      - any-glob-to-any-file: ".pre-commit-config.yaml"

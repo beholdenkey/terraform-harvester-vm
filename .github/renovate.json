@@ -1,0 +1,27 @@
+{
+    "extends": [
+      "config:recommended",
+      "docker:enableMajor",
+      ":disableRateLimiting",
+      ":dependencyDashboard",
+      ":enablePreCommit",
+      ":semanticCommits",
+      ":automergeBranchPush"
+    ],
+    "enabled": true,
+    "dependencyDashboard": true,
+    "dependencyDashboardTitle": "Renovate Dashboard 🤖",
+    "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
+    "rebaseWhen": "conflicted",
+    "commitBodyTable": true,
+    "platformCommit": true,
+    "gitAuthor": "Justin Bailey <beholdenkey@users.noreply.github.com>",
+    "commitBody": "Signed-off-by: Justin Bailey <beholdenkey@users.noreply.github.com>",
+    "helm-values": {
+      "fileMatch": ["./.+\\.yaml$"]
+    },
+    "kubernetes": {
+      "fileMatch": ["\\.yaml$"],
+      "ignorePaths": [".github"]
+    }
+  }

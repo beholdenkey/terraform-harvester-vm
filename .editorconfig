@@ -22,9 +22,5 @@ indent_style = space
 max_line_length = 0
 trim_trailing_whitespace = false
 
-[Makefile]
-tab_width = 2
-indent_style = tab
-
 [COMMIT_EDITMSG]
 max_line_length = 0

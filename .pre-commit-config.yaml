@@ -1,19 +1,10 @@
 ---
-# pre-commit is a tool to perform a predefined set of tasks manually and/or
-# automatically before git commits are made.
-#
-# Config reference: https://pre-commit.com/#pre-commit-configyaml---top-level
-#
-# Common tasks
-#
-# - Run on all files:   pre-commit run --all-files
-# - Register git hooks: pre-commit install --install-hooks
-#
-# See https://pre-commit.com for more information
-# See https://pre-commit.com/hooks.html for more hooks
-# See https://pre-commit.com for more information
-# spell-checker: disable
-# See https://pre-commit.com for more information
+# yaml-language-server: $schema=https://json.schemastore.org/pre-commit-config
+fail_fast: false
+default_stages:
+  - pre-commit
+  - pre-push
+
 repos:
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.96.2
@@ -38,8 +29,69 @@ repos:
           - "--args=--only=terraform_required_providers"
           - "--args=--only=terraform_standard_module_structure"
           - "--args=--only=terraform_workspace_remote"
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.15.0
+    hooks:
+      - id: markdownlint-cli2
+        args:
+          - --config
+          - .ci/markdownlint/.markdownlint.yaml
+
+  - repo: https://github.com/trufflesecurity/trufflehog
+    rev: v3.84.1
+    hooks:
+      - id: trufflehog
+
+  - repo: https://github.com/sirosen/texthooks
+    rev: 0.6.7
+    hooks:
+      - id: fix-spaces
+      - id: alphabetize-codeowners
+      - id: fix-ligatures
+      - id: fix-smartquotes
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-      - id: check-merge-conflict
+      - id: fix-byte-order-marker
       - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+      - id: check-executables-have-shebangs
+      - id: check-added-large-files
+        args:
+          - "--maxkb=4096"
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: detect-private-key
+
+  - repo: https://github.com/google/go-jsonnet
+    rev: v0.20.0
+    hooks:
+      - id: jsonnet-format
+      - id: jsonnet-lint
+
+  - repo: https://github.com/google/yamlfmt
+    rev: v0.14.0
+    hooks:
+      - id: yamlfmt
+        language: system
+        args:
+          - --conf
+          - .ci/yamlfmt/.yamlfmt
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.0.0
+    hooks:
+      - id: commitizen
+      - id: commitizen-branch
+        stages:
+          - post-commit
+          - pre-push
+
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v8.16.0
+    hooks:
+      - id: cspell

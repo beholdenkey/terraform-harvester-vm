@@ -1,0 +1,16 @@
+---
+version: "3"
+
+set: [pipefail]
+shopt: [globstar]
+
+includes:
+  pre-commit:
+    aliases: ["pre"]
+    taskfile: .taskfiles/PreCommit/Taskfile.yaml
+
+tasks:
+  default:
+    desc: Show help
+    cmds:
+      - task --list

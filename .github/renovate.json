@@ -1,20 +1,34 @@
 {
-    "extends": [
-      "config:recommended",
-      "docker:enableMajor",
-      ":disableRateLimiting",
-      ":dependencyDashboard",
-      ":enablePreCommit",
-      ":semanticCommits",
-      ":automergeBranchPush"
-    ],
-    "enabled": true,
-    "dependencyDashboard": true,
-    "dependencyDashboardTitle": "Renovate Dashboard 🤖",
-    "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
-    "rebaseWhen": "conflicted",
-    "commitBodyTable": true,
-    "platformCommit": true,
-    "gitAuthor": "Justin Bailey <beholdenkey@users.noreply.github.com>",
-    "commitBody": "Signed-off-by: Justin Bailey <beholdenkey@users.noreply.github.com>"
-  }
+  "extends": [
+    "config:recommended",
+    "docker:enableMajor",
+    ":disableRateLimiting",
+    ":dependencyDashboard",
+    ":enablePreCommit",
+    ":semanticCommits",
+    ":automergeBranch"
+  ],
+  "dependencyDashboardTitle": "Dependency Management Dashboard 🤖",
+  "suppressNotifications": [
+    "prEditedNotification",
+    "prIgnoreNotification"
+  ],
+  "rebaseWhen": "conflicted",
+  "commitBodyTable": true,
+  "platformCommit": "enabled",
+  "gitAuthor": "Justin Bailey <beholdenkey@users.noreply.github.com>",
+  "commitBody": "Signed-off-by: Justin Bailey <beholdenkey@users.noreply.github.com>",
+  "timezone": "America/New_York",
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true,
+      "automergeType": "pr"
+    }
+  ]
+}

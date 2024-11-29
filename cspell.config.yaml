@@ -1,8 +1,54 @@
+---
 version: "0.2"
+language: en_US
+caseSensitive: false
+dictionaries:
+  - en_US
+  - companies
+  - softwareTerms
+  - misc
+  - go
+  - python
+  - bash
 words:
-  - beholdenkey
-  - conventionalcommits
+  - trufflesecurity
+  - automerge
   - cpus
+  - rootdisk
+  - examplepassword
+  - virtualmachine
+  - cloudinit
   - kubeconfig
-  - tada
   - Terragrunt
+  - boop
+  - taskfile
+  - taskfiles
+  - Taskfile
+  - beholdenkey
+  - reprod
+  - currentbehavior
+  - expectedbehavior
+  - indentless
+  - autoupdate
+  - kentaro
+  - tfstate
+  - tfvars
+  - sentitive
+  - terraformrc
+  - markdownlintignore
+  - yamlfmt
+  - tflint
+  - markdownlint
+  - trufflehog
+  - smartquotes
+  - jsonnet
+  - EDITMSG
+  - automerge
+  - eeef
+  - fbca
+  - crossplane
+  - Crossplane
+  - ffec
+  - TFLINT
+  - clowdhaus
+  - hcledit

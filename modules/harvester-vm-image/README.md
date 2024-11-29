@@ -5,7 +5,7 @@
 
 | Name | Version |
 |------|---------|
-| harvester | 0.6.4 |
+| harvester | 0.6.5 |
 
 
 
@@ -13,7 +13,7 @@
 
 | Name | Type |
 |------|------|
-| [harvester_image.vm_image](https://registry.terraform.io/providers/harvester/harvester/0.6.4/docs/resources/image) | resource |
+| [harvester_image.vm_image](https://registry.terraform.io/providers/harvester/harvester/0.6.5/docs/resources/image) | resource |
 
 ## Inputs
 
@@ -28,7 +28,7 @@
 | pvc_name | PVC Name | `string` | `null` | no |
 | pvc_namespace | PVC Namespace | `string` | `null` | no |
 | storage_class_name | The name of the storage class | `string` | `null` | no |
-| tags | Tags associated with the image | `map(string)` | `{}` | no |  
+| tags | Tags associated with the image | `map(string)` | `{}` | no |
 
 ## Outputs
 

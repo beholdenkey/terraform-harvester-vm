@@ -1,0 +1,33 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Security
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  secret-scan:
+    name: Run TruffleHog Secret Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Run TruffleHog Secret Scanning
+        uses: trufflesecurity/trufflehog@e4956615ad9a60a19b3bdb8fd40d91f65222f5ff # v3.84.1
+        with:
+          path: ./
+          base: ${{ github.event.repository.default_branch }}
+
+      - name: Post results if secrets found
+        if: failure() # If the previous step fails (i.e., secrets found)
+        run: echo "❌ Secrets detected! Please review the findings and remove any secrets before merging."

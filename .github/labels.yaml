@@ -1,15 +1,209 @@
 ---
-# Area
-- {name: "area/infra", color: "b60205"}
-- {name: "area/ci", color: "b60205"}
-- {name: "area/docs", color: "b60205"}
-# Renovate
-- {name: "renovate/github-action", color: "027fa0"}
-- {name: "renovate/github-release", color: "027fa0"}
-- {name: "renovate/terraform", color: "027fa0"}
-- {name: "renovate/pre-commit", color: "0e8a16"}
-# Semantic Type
-- {name: "type/patch", color: "ffec19"}
-- {name: "type/minor", color: "ff9800"}
-- {name: "type/major", color: "f6412d"}
-- {name: "type/break", color: "f6412d"}
+- name: area/docs
+  color: "0075ca"
+  description: "Documentation related changes"
+  aliases: ["documentation", "doc"]
+
+- name: area/terraform
+  color: "ff7f50"
+  description: "Terraform related changes"
+
+- area/iac:
+  color: "ff7f50"
+  description: "Infrastructure as Code related changes"
+
+- name: area/ci
+  color: "1d76db"
+  description: "CI configuration and process related changes"
+  aliases: ["continuous-integration"]
+
+- name: area/workflows
+  color: "f9d033"
+  description: "GitHub workflows related changes"
+  aliases: ["github-workflow"]
+
+- name: area/actions
+  color: "5319e7"
+  description: "GitHub actions related changes"
+  aliases: ["actions"]
+
+- name: area/config
+  color: "8b4513"
+  description: "Configuration files related changes"
+  aliases: ["configuration"]
+
+- name: area/backend
+  color: "f9d033"
+  description: "Backend related changes"
+
+- name: area/frontend
+  color: "f9d033"
+  description: "Frontend related changes"
+
+- name: area/taskfile
+  color: "ff7f50"
+  description: "Taskfile related changes"
+
+- name: type/bug
+  color: "d73a4a"
+  description: "Something is not working"
+  aliases: ["defect", "issue"]
+
+- name: type/feature
+  color: "a2eeef"
+  description: "New feature or request"
+  aliases: ["enhancement"]
+
+- name: type/docs
+  color: "0075ca"
+  description: "Documentation-related change"
+  aliases: ["doc-update"]
+
+- name: type/security
+  color: "b60205"
+  description: "Security-related change or issue"
+
+- name: type/testing
+  color: "fbca04"
+  description: "Testing-related change"
+  aliases: ["tests", "qa"]
+
+- name: type/chore
+  color: "96f2d7"
+  description: "Maintenance or cleanup task"
+
+- name: renovate/container
+  color: "027fa0"
+  description: "Renovate updates for container images"
+
+- name: renovate/helm
+  color: "027fa0"
+  description: "Renovate updates for Helm charts"
+
+- renovate/github-release:
+  color: "027fa0"
+  description: "Renovate updates for GitHub Releases"
+
+- name: renovate/crossplane
+  color: "027fa0"
+  description: "Renovate updates for Crossplane configurations"
+
+- name: renovate/terraform
+  color: "027fa0"
+  description: "Renovate updates for Terraform configurations"
+
+- name: renovate/github-action
+  color: "027fa0"
+  description: "Renovate updates for GitHub Actions"
+
+- name: renovate/pre-commit
+  color: "0e8a16"
+  description: "Renovate updates for pre-commit hooks"
+
+- name: priority/critical
+  color: "ff6347"
+  description: "Immediate attention required"
+  aliases: ["critical-priority"]
+
+- name: priority/high
+  color: "ffb266"
+  description: "Needs to be worked on soon"
+  aliases: ["high-priority"]
+
+- name: priority/medium
+  color: "e4e669"
+  description: "Can be deferred for later"
+  aliases: ["medium-priority"]
+
+- name: priority/low
+  color: "c7e9b4"
+  description: "Low priority task"
+  aliases: ["low-priority"]
+
+- name: effort/1
+  color: "d4f4fa"
+  description: "Minimal effort required"
+
+- name: effort/2
+  color: "c4e6f2"
+  description: "Low effort task"
+
+- name: effort/3
+  color: "b3d9ea"
+  description: "Moderate effort task"
+
+- name: effort/5
+  color: "91c7db"
+  description: "Significant effort task"
+
+- name: effort/8
+  color: "6fb5cc"
+  description: "High effort task"
+
+- name: effort/13
+  color: "4ea3bd"
+  description: "Very high effort task"
+
+- name: state/approved
+  color: "28a745"
+  description: "Issue or PR is approved"
+
+- name: state/blocked
+  color: "d73a4a"
+  description: "Issue or PR is blocked"
+
+- name: state/pending
+  color: "f9d033"
+  description: "Issue or PR is pending further action"
+
+- name: state/inactive
+  color: "cccccc"
+  description: "Issue or PR is inactive"
+
+- name: work/chaotic
+  color: "ff6347"
+  description: "Chaotic situation requiring immediate action"
+
+- name: work/complex
+  color: "ffb266"
+  description: "Complex situation requiring expertise and experimentation"
+
+- name: work/complicated
+  color: "e4e669"
+  description: "Complicated situation requiring analysis and expertise"
+
+- name: work/obvious
+  color: "c7e9b4"
+  description: "Obvious task, straightforward to resolve"
+
+- name: type/patch
+  color: "ffec19"
+  description: "Patch-level change"
+
+- name: type/minor
+  color: "ff9800"
+  description: "Minor change"
+
+- name: type/major
+  color: "f6412d"
+  description: "Major change"
+
+- name: type/break
+  color: "f6412d"
+  description: "Breaking change"
+
+- name: good first issue
+  color: "7057ff"
+  description: "Good issue for newcomers"
+
+- name: help wanted
+  color: "008672"
+  description: "Needs help from contributors"
+
+- name: breaking
+  color: "d73a4a"
+  description: "Breaking change"
+
+- name: crossplane
+  color: "ff7f50"
+  description: "Crossplane Configuration"

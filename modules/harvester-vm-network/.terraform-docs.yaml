@@ -1,3 +1,4 @@
+---
 formatter: markdown table
 
 content: |-
@@ -7,7 +8,7 @@ content: |-
 
   {{ .Resources }}
 
-  {{ .Inputs }}  
+  {{ .Inputs }}
 
   {{ .Outputs }}
 

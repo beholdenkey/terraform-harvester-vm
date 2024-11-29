@@ -6,7 +6,7 @@ Terraform modules which creates Virtual Machines on Harvester HCI
 
 ## Requirements
 
-- Harvester HCI Cluster
+- A Healthy Harvester HCI Cluster or Single Node Installation
 - kubeconfig file for the cluster
 
 <!-- BEGIN_TF_DOCS -->

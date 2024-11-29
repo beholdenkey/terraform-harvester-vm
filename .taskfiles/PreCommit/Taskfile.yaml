@@ -1,0 +1,34 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+tasks:
+  init:
+    desc: Initialize pre-commit hooks
+    deps: [update]
+    cmds:
+      - pre-commit install --install-hooks
+    preconditions:
+      - {msg: "pre-commit is not installed. Please install pre-commit.", sh: "command -v pre-commit"}
+  update:
+    desc: Update pre-commit dependencies
+    cmds:
+      - pre-commit autoupdate
+    preconditions:
+      - {msg: "pre-commit is not installed. Please install pre-commit.", sh: "command -v pre-commit"}
+  run:
+    desc: Run all pre-commit hooks
+    cmds:
+      - pre-commit run --all-files
+    preconditions:
+      - {msg: "pre-commit is not installed. Please install pre-commit.", sh: "command -v pre-commit"}
+  uninstall:
+    desc: Uninstall pre-commit hooks
+    cmds:
+      - pre-commit uninstall
+    preconditions:
+      - {msg: "pre-commit is not installed. Please install pre-commit.", sh: "command -v pre-commit",}
+
+  spellcheck:
+    desc: Run spell check on all files
+    cmds:
+      - npx cspell "**/*"

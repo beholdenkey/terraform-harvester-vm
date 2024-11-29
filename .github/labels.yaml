@@ -8,7 +8,7 @@
   color: "ff7f50"
   description: "Terraform related changes"
 
-- area/iac:
+- name: area/iac
   color: "ff7f50"
   description: "Infrastructure as Code related changes"
 
@@ -80,7 +80,7 @@
   color: "027fa0"
   description: "Renovate updates for Helm charts"
 
-- renovate/github-release:
+- name: renovate/github-release
   color: "027fa0"
   description: "Renovate updates for GitHub Releases"
 

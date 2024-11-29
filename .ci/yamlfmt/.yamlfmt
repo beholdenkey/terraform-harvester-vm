@@ -1,0 +1,25 @@
+line_ending: lf
+
+doublestar: false  # Disable recursive directory traversal if your Helm charts are flatly structured. Adjust according to your project structure.
+
+continue_on_error: false  # Halt on the first encountered error to prevent cascading issues.
+
+regex_exclude:
+  - '.pre-commit-config.yaml'  # Exclude specific config files that should not be altered.
+
+extensions:
+  - ".yaml"
+  - ".yml"  # Focus on YAML file extensions commonly used in Helm charts.
+
+formatter:
+  type: basic
+  indent: 2  # Helm templates commonly use 2 spaces for indentation, aligning with YAML standards.
+  include_document_start: true  # Preserve document start markers, which can be important in certain Kubernetes manifests.
+  line_ending: lf  # Reinforce line ending preference at the formatter level.
+  retain_line_breaks: true  # Essential for preserving the structure of Helm templates, especially around directives.
+  disallow_anchors: false  # Helm templates might not use YAML anchors, but disabling this ensures compatibility.
+  max_line_length: 0  # Disable line length restriction to avoid breaking Helm directives that require being on a single line.
+  scan_folded_as_literal: true  # Prevent altering the representation of multiline strings, which could be used in templates.
+  indentless_arrays: false  # Ensure arrays are indented, adhering to YAML best practices and Helm expectations.
+  drop_merge_tag: false  # Preserve YAML merge tags, although they're less common in Helm templates.
+  pad_line_comments: 1  # Maintain readability in comments with a space after '#'.

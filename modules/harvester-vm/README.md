@@ -5,7 +5,7 @@
 
 | Name | Version |
 |------|---------|
-| harvester | 0.6.4 |
+| harvester | 0.6.5 |
 
 
 
@@ -13,7 +13,7 @@
 
 | Name | Type |
 |------|------|
-| [harvester_virtualmachine.vm](https://registry.terraform.io/providers/harvester/harvester/0.6.4/docs/resources/virtualmachine) | resource |
+| [harvester_virtualmachine.vm](https://registry.terraform.io/providers/harvester/harvester/0.6.5/docs/resources/virtualmachine) | resource |
 
 ## Inputs
 
@@ -30,7 +30,7 @@
 | disks | List of disks for the virtual machine | ```list(object({ name = string type = string size = string bus = string boot_order = number auto_delete = bool }))``` | `[]` | no |
 | namespace | Namespace of the virtual machine | `string` | `"default"` | no |
 | network_data | Network data for cloud-init configuration | `string` | `""` | no |
-| tags | Tags for the virtual machine | `map(string)` | `{}` | no |  
+| tags | Tags for the virtual machine | `map(string)` | `{}` | no |
 
 ## Outputs
 

@@ -5,7 +5,7 @@
 
 | Name | Version |
 |------|---------|
-| harvester | 0.6.4 |
+| harvester | 0.6.5 |
 
 
 
@@ -13,7 +13,7 @@
 
 | Name | Type |
 |------|------|
-| [harvester_network.vm_network](https://registry.terraform.io/providers/harvester/harvester/0.6.4/docs/resources/network) | resource |
+| [harvester_network.vm_network](https://registry.terraform.io/providers/harvester/harvester/0.6.5/docs/resources/network) | resource |
 
 ## Inputs
 
@@ -22,7 +22,7 @@
 | cluster_network_name | Cluster network name | `string` | n/a | yes |
 | name | Name of the network | `string` | n/a | yes |
 | vlan_id | VLAN ID for the network | `string` | n/a | yes |
-| namespace | Namespace of the network | `string` | `"default"` | no |  
+| namespace | Namespace of the network | `string` | `"default"` | no |
 
 ## Outputs
 

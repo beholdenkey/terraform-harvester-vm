@@ -31,7 +31,7 @@ repos:
           - "--args=--only=terraform_workspace_remote"
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.17.0
+    rev: v0.17.1
     hooks:
       - id: markdownlint-cli2
         args:

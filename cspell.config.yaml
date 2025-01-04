@@ -11,6 +11,8 @@ dictionaries:
   - python
   - bash
 words:
+  - virtio
+  - almalinux
   - tfupdate
   - terrascan
   - trufflesecurity

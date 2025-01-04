@@ -36,7 +36,6 @@ repos:
       - id: terragrunt_providers_lock
       - id: terraform_wrapper_module_for_each
       - id: terrascan
-      - id: tfupdate
 
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2

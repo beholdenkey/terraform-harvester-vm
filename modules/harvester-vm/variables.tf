@@ -44,11 +44,11 @@ variable "disks" {
   description = "List of disks for the virtual machine"
   type = list(object({
     name        = string
-    type        = string
-    size        = string
-    bus         = string
-    boot_order  = number
-    auto_delete = bool
+    type        = optional(string)
+    size        = optional(string)
+    bus         = optional(string)
+    boot_order  = optional(number)
+    auto_delete = optional(bool)
   }))
   default = []
 }
@@ -61,6 +61,7 @@ variable "vm_image_id" {
 variable "user_data" {
   description = "User data for cloud-init configuration"
   type        = string
+  default     = ""
 }
 
 variable "network_data" {

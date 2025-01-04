@@ -18,3 +18,27 @@ variable "namespace" {
   type        = string
   default     = "default"
 }
+
+variable "route_mode" {
+  description = "Route mode for the network"
+  type        = string
+  default     = "manual"
+}
+
+variable "route_cidr" {
+  description = "CIDR for the network"
+  type        = string
+  validation {
+    condition     = var.route_cidr != ""
+    error_message = "route_cidr must be provided"
+  }
+}
+
+variable "route_gateway" {
+  description = "Gateway for the network"
+  type        = string
+  validation {
+    condition     = var.route_gateway != ""
+    error_message = "route_gateway must be provided"
+  }
+}

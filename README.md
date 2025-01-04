@@ -30,11 +30,11 @@ Terraform modules which creates Virtual Machines on Harvester HCI
 | image_source_type | Source type for the image (e.g., download, upload) | `string` | n/a | yes |
 | image_url | URL from where the image will be downloaded | `string` | n/a | yes |
 | network_name | Name of the network | `string` | n/a | yes |
+| network_route_cidr | CIDR for the network | `string` | n/a | yes |
+| network_route_gateway | Gateway for the network | `string` | n/a | yes |
 | network_vlan_id | VLAN ID for the network | `string` | n/a | yes |
-| user_data | User data for cloud-init configuration | `string` | n/a | yes |
 | vm_cpus | Number of CPUs for the VM | `number` | n/a | yes |
 | vm_description | Description for the VM | `string` | n/a | yes |
-| vm_disks | List of disks for the VM | ```list(object({ name = string # Name of the disk type = string # Type of the disk size = string # Size of the disk bus = string # Bus type of the disk boot_order = number # Boot order for the disk auto_delete = bool   # Auto delete flag for the disk }))``` | n/a | yes |
 | vm_hostname | Hostname for the virtual machine | `string` | n/a | yes |
 | vm_memory | Memory allocation for the VM | `string` | n/a | yes |
 | vm_name | Name of the virtual machine | `string` | n/a | yes |
@@ -42,6 +42,9 @@ Terraform modules which creates Virtual Machines on Harvester HCI
 | image_tags | Tags associated with the image | `map(string)` | `{}` | no |
 | network_data | Network data for cloud-init configuration | `string` | `""` | no |
 | network_namespace | Namespace of the network | `string` | `"default"` | no |
+| network_route_mode | Route mode for the network | `string` | `"manual"` | no |
+| user_data | User data for cloud-init configuration | `string` | `""` | no |
+| vm_disks | List of disks for the VM | ```list(object({ name = string type = optional(string) size = optional(string) bus = optional(string) boot_order = optional(number) auto_delete = optional(bool) }))``` | `[]` | no |
 | vm_namespace | Namespace where the VM will reside | `string` | `"default"` | no |
 | vm_tags | Tags associated with the VM | `map(string)` | `{}` | no |
 

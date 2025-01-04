@@ -4,6 +4,9 @@ module "harvester_vm_network" {
   name                 = var.network_name
   namespace            = var.network_namespace
   vlan_id              = var.network_vlan_id
+  route_mode           = var.network_route_mode
+  route_cidr           = var.network_route_cidr
+  route_gateway        = var.network_route_gateway
 }
 
 module "harvester_vm_image" {

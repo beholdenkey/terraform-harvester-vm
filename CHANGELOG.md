@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/beholdenkey/terraform-harvester-vm/compare/v1.2.0...v1.3.0) (2025-01-04)
+
+
+### Features
+
+* improve module ([#45](https://github.com/beholdenkey/terraform-harvester-vm/issues/45)) ([bfac4b9](https://github.com/beholdenkey/terraform-harvester-vm/commit/bfac4b9e1877003f1f2f8fa52a51cfcee8e5fc6a))
+
 ## [1.2.0](https://github.com/beholdenkey/terraform-harvester-vm/compare/v1.1.0...v1.2.0) (2024-09-13)
 
 ### Features

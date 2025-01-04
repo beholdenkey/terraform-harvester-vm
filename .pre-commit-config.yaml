@@ -6,14 +6,13 @@ default_stages:
   - pre-push
 
 repos:
+
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.96.3
     hooks:
       - id: terraform_fmt
-      - id: terraform_validate
       - id: terraform_docs
-        args:
-          - "--args=--lockfile=false"
+      - id: terraform_providers_lock
       - id: terraform_tflint
         args:
           - "--args=--only=terraform_deprecated_interpolation"
@@ -29,6 +28,16 @@ repos:
           - "--args=--only=terraform_required_providers"
           - "--args=--only=terraform_standard_module_structure"
           - "--args=--only=terraform_workspace_remote"
+      - id: terraform_trivy
+      - id: terraform_validate
+      - id: terragrunt_fmt
+      - id: terragrunt_validate
+      - id: terragrunt_validate_inputs
+      - id: terragrunt_providers_lock
+      - id: terraform_wrapper_module_for_each
+      - id: terrascan
+      - id: tfupdate
+
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.17.1

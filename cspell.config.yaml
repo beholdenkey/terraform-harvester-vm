@@ -11,6 +11,8 @@ dictionaries:
   - python
   - bash
 words:
+  - tfupdate
+  - terrascan
   - trufflesecurity
   - automerge
   - cpus

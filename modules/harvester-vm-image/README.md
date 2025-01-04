@@ -5,15 +5,13 @@
 
 | Name | Version |
 |------|---------|
-| harvester | 0.6.5 |
-
-
+| harvester | 0.6.6 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [harvester_image.vm_image](https://registry.terraform.io/providers/harvester/harvester/0.6.5/docs/resources/image) | resource |
+| [harvester_image.vm_image](https://registry.terraform.io/providers/harvester/harvester/0.6.6/docs/resources/image) | resource |
 
 ## Inputs
 

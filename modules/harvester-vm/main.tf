@@ -17,17 +17,20 @@ resource "harvester_virtualmachine" "vm" {
     for_each = var.disks
     content {
       name        = disk.value.name
-      type        = disk.value.type
-      size        = disk.value.size
-      bus         = disk.value.bus
-      boot_order  = disk.value.boot_order
+      type        = lookup(disk.value, "type", null)
+      size        = lookup(disk.value, "size", null)
+      bus         = lookup(disk.value, "bus", "virtio")
+      boot_order  = lookup(disk.value, "boot_order", null)
       image       = var.vm_image_id
-      auto_delete = disk.value.auto_delete
+      auto_delete = lookup(disk.value, "auto_delete", "true")
     }
   }
 
-  cloudinit {
-    user_data    = var.user_data
-    network_data = var.network_data
+  dynamic "cloudinit" {
+    for_each = length(var.user_data) > 0 || length(var.network_data) > 0 ? [1] : []
+    content {
+      user_data    = var.user_data
+      network_data = var.network_data
+    }
   }
 }

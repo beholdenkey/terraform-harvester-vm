@@ -25,6 +25,29 @@ variable "network_namespace" {
   default     = "default"
 }
 
+variable "network_route_mode" {
+  description = "Route mode for the network"
+  type        = string
+  default     = "manual"
+}
+
+variable "network_route_cidr" {
+  description = "CIDR for the network"
+  type        = string
+  validation {
+    condition     = var.network_route_cidr != ""
+    error_message = "network_route_cidr must be provided if network_route_mode is set to auto"
+  }
+}
+
+variable "network_route_gateway" {
+  description = "Gateway for the network"
+  type        = string
+  validation {
+    condition     = var.network_route_gateway != ""
+    error_message = "network_route_gateway must be provided if network_route_mode is set to auto"
+  }
+}
 
 variable "image_name" {
   description = "The name of the OS image"
@@ -103,19 +126,21 @@ variable "vm_memory" {
 variable "vm_disks" {
   description = "List of disks for the VM"
   type = list(object({
-    name        = string # Name of the disk
-    type        = string # Type of the disk
-    size        = string # Size of the disk
-    bus         = string # Bus type of the disk
-    boot_order  = number # Boot order for the disk
-    auto_delete = bool   # Auto delete flag for the disk
+    name        = string
+    type        = optional(string)
+    size        = optional(string)
+    bus         = optional(string)
+    boot_order  = optional(number)
+    auto_delete = optional(bool)
   }))
+  default = []
 }
 
 
 variable "user_data" {
   description = "User data for cloud-init configuration"
   type        = string
+  default     = ""
 }
 
 variable "network_data" {

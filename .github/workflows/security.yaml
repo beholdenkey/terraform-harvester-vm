@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run TruffleHog Secret Scanning
-        uses: trufflesecurity/trufflehog@77447e6bbdf44f01c7309b125c62088cbe75de29 # v3.88.10
+        uses: trufflesecurity/trufflehog@1c9ef1d34c2043b5b68769296e27efa33b6eb91e # v3.88.11
         with:
           path: ./
           base: ${{ github.event.repository.default_branch }}

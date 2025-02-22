@@ -91,7 +91,7 @@ repos:
           - .ci/yamlfmt/.yamlfmt
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.1.1
+    rev: v4.2.2
     hooks:
       - id: commitizen
       - id: commitizen-branch

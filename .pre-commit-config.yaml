@@ -100,6 +100,6 @@ repos:
           - pre-push
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.17.2
+    rev: v8.17.3
     hooks:
       - id: cspell

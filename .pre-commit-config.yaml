@@ -47,7 +47,7 @@ repos:
           - .ci/markdownlint/.markdownlint.yaml
 
   - repo: https://github.com/trufflesecurity/trufflehog
-    rev: v3.88.15
+    rev: v3.88.16
     hooks:
       - id: trufflehog
 

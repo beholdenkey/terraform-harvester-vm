@@ -1,5 +1,5 @@
 terraform {
-  required_version = "1.6.5"
+  required_version = "1.11.3"
   required_providers {
     harvester = {
       source  = "harvester/harvester"

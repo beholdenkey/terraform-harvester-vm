@@ -76,7 +76,7 @@ repos:
       - id: detect-private-key
 
   - repo: https://github.com/google/go-jsonnet
-    rev: v0.20.0
+    rev: v0.21.0
     hooks:
       - id: jsonnet-format
       - id: jsonnet-lint

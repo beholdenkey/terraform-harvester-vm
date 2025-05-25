@@ -82,7 +82,7 @@ repos:
       - id: jsonnet-lint
 
   - repo: https://github.com/google/yamlfmt
-    rev: v0.16.0
+    rev: v0.17.0
     hooks:
       - id: yamlfmt
         language: system

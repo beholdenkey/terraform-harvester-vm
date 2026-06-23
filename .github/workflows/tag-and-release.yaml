@@ -15,7 +15,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Run Release Please
         uses: googleapis/release-please-action@v4
